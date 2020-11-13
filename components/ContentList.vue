@@ -65,6 +65,10 @@ export default {
   }
 
   &:hover {
+    h1, h2, h3, h4 {
+      @apply underline;
+    }
+
     .blog-image {
       transform: scale(1.1);
       filter: blur(0);
