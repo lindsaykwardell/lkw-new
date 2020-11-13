@@ -8,7 +8,7 @@
         Search Episodes
         <input
           type="text"
-          class="p-2 text-lg w-full border-2 rounded"
+          class="p-2 mt-3 text-lg w-full border-2 rounded"
           v-model="search"
           aria-label="Search Episodes"
         />

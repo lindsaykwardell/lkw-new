@@ -5,7 +5,7 @@
         Search Posts
         <input
           type="text"
-          class="p-2 text-lg"
+          class="p-2 mt-3 text-lg w-full border-2 rounded"
           v-model="search"
           aria-label="Search Posts"
         />

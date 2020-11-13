@@ -25,7 +25,7 @@
 
 <style lang="postcss">
 body {
-  @apply bg-gray-100;
+  @apply bg-gray-200;
   font-family: 'Fira Sans', sans-serif;
 }
 

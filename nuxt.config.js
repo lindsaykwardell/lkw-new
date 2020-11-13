@@ -53,9 +53,7 @@ export default {
             user(login:"lindsaykwardell"){
               name
               bio
-              bioHTML
               isHireable
-              location
               url
               avatarUrl
               repositories(first:6, orderBy:{
@@ -65,7 +63,7 @@ export default {
                   name
                   url
                   description
-                  isFork
+                  stargazerCount
                   licenseInfo{
                     name
                   }
