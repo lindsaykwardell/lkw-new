@@ -13,6 +13,7 @@
       </nuxt-link>
       <div class="flex-grow flex justify-end text-white text-lg">
         <nuxt-link to="/" class="mx-4 hidden sm:inline">Home</nuxt-link>
+        <nuxt-link to="/projects" class="mx-4">Projects</nuxt-link>
         <nuxt-link to="/blog/" class="mx-4">Blog</nuxt-link>
         <nuxt-link to="/podcast" class="mx-4">Podcast</nuxt-link>
       </div>
@@ -30,7 +31,7 @@ body {
 }
 
 main {
-  @apply p-4;
+  @apply pt-4;
   position: relative;
   top: 70px;
 }
@@ -44,7 +45,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+footer {
   font-family: 'Rokkitt', serif;
 }
 

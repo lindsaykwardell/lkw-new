@@ -1,5 +1,9 @@
 <template>
   <div>
+    <h1 class="text-center">Blog Posts</h1>
+    <p class="text-2xl text-center">
+      I write about programming, fiction, and life.
+    </p>
     <div class="flex flex-col justify-center items-center py-6">
       <label class="text-lg w-5/6 md:w-1/2">
         Search Posts
@@ -12,34 +16,24 @@
       </label>
     </div>
     <ContentList :content="activePosts" />
-    <!-- <div class="flex flex-col lg:flex-row flex-wrap">
-      <div
-        v-for="post in activePosts"
-        :key="post.slug"
-        class="w-full lg:w-1/2 xl:w-1/3 p-8"
-      >
-        <div class="blog-item">
-          <nuxt-link :to="`/blog${post.slug}`">
-            <img
-              class="blog-image"
-              :src="post.image || $github.user.avatarUrl"
-              :alt="post.title"
-            />
-            <h3 class="blog-title">{{ post.title }}</h3>
-            <p class="blog-excerpt">{{ post.excerpt }}</p>
-          </nuxt-link>
-        </div>
-      </div>
-    </div> -->
     <client-only>
-      <InfiniteLoading v-if="activePosts.length > visible" @infinite="infiniteHandler" />
+      <InfiniteLoading
+        v-if="activePosts.length > visible"
+        @infinite="infiniteHandler"
+      />
     </client-only>
+    <div
+      class="w-full h-16 flex justify-center items-center bg-gray-900 text-white"
+    >
+      <SocialLinks />
+    </div>
   </div>
 </template>
 
 <script>
 import InfiniteLoading from 'vue-infinite-loading'
 import ContentList from '@/components/ContentList'
+import SocialLinks from '@/components/SocialLinks'
 import Fuse from 'fuse.js'
 
 export default {
@@ -87,9 +81,10 @@ export default {
       clearTimeout(this.debounceSearch)
 
       if (!this.search.length) this.searchedPosts = this.posts
-      else this.debounceSearch = setTimeout(() => {
-        this.performSearch()
-      }, 1000)
+      else
+        this.debounceSearch = setTimeout(() => {
+          this.performSearch()
+        }, 1000)
     },
   },
   mounted() {
@@ -110,6 +105,7 @@ export default {
   components: {
     InfiniteLoading,
     ContentList,
+    SocialLinks,
   },
 }
 </script>

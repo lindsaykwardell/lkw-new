@@ -11,14 +11,15 @@
         <h1>{{ blog.title }}</h1>
         <div class="text-center pt-2 text-gray-600">
           Published by {{ blog.author }} on {{ date }}
-          <!-- <em>(last updated {{ updatedDate }})</em> -->
         </div>
+        <SocialLinks class="m-auto pt-3" />
       </div>
+      <hr />
       <article class="py-8">
         <nuxt-content :document="blog"></nuxt-content>
       </article>
     </div>
-    <div class="bg-gray-400 p-6 w-full">
+    <div class="bg-gray-400 p-6 m-4 w-full">
       <div class="mb-4">
         <h2>Tags</h2>
         <TagPill v-for="tag in blog.tags" :key="tag">
@@ -26,12 +27,18 @@
         </TagPill>
       </div>
     </div>
+    <div
+      class="w-full h-16 flex justify-center items-center bg-gray-900 text-white"
+    >
+      <SocialLinks />
+    </div>
   </div>
 </template>
 
 <script>
 import dayjs from 'dayjs'
 import TagPill from '@/components/TagPill'
+import SocialLinks from '@/components/SocialLinks'
 
 export default {
   async asyncData({ $content, params }) {
@@ -55,6 +62,7 @@ export default {
   },
   components: {
     TagPill,
+    SocialLinks
   },
 }
 </script>

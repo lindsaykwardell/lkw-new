@@ -21,14 +21,23 @@
       </template>
     </ContentList>
     <client-only>
-      <InfiniteLoading v-if="activeEpisodes.length > visible" @infinite="infiniteHandler" />
+      <InfiniteLoading
+        v-if="activeEpisodes.length > visible"
+        @infinite="infiniteHandler"
+      />
     </client-only>
+    <div
+      class="w-full h-16 flex justify-center items-center bg-gray-900 text-white"
+    >
+      <SocialLinks />
+    </div>
   </div>
 </template>
 
 <script>
 import ContentList from '@/components/ContentList'
 import InfiniteLoading from 'vue-infinite-loading'
+import SocialLinks from '@/components/SocialLinks'
 import Fuse from 'fuse.js'
 
 export default {
@@ -93,6 +102,7 @@ export default {
   components: {
     ContentList,
     InfiniteLoading,
+    SocialLinks,
   },
 }
 </script>

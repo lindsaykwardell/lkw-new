@@ -36,6 +36,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    "@nuxtjs/fontawesome"
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -56,6 +57,23 @@ export default {
               isHireable
               url
               avatarUrl
+              pinnedItems(first:6,types:[REPOSITORY]) {
+                nodes{
+                  ... on Repository {
+                    name
+                    url
+                    description
+                    stargazerCount
+                    licenseInfo{
+                      name
+                    }
+                    primaryLanguage {
+                      color
+                      name
+                    }
+                  }
+                }
+              }
               repositories(first:6, orderBy:{
                 field:UPDATED_AT, direction: DESC
               }){
@@ -85,7 +103,7 @@ export default {
    ** See https://content.nuxtjs.org/configuration
    */
   content: {
-    liveEdit: false
+    liveEdit: true
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
@@ -99,6 +117,16 @@ export default {
         'postcss-nested': {},
       },
     },
+  },
+  fontawesome: {
+    icons: {
+      solid: true,
+      brands: [
+        'faGithub',
+        'faTwitter',
+        'faLinkedIn'
+      ]
+    }
   },
   generate: {
     async routes() {

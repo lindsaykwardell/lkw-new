@@ -4,7 +4,7 @@
       <img
         :src="$github.user.avatarUrl"
         :alt="$github.user.name"
-        class="rounded-full shadow-xl w-64 lg:w-auto"
+        class="rounded-full shadow-xl w-64 lg:w-auto my-4"
       />
       <h1 class="title text-6xl py-3 font-medium">
         {{ $github.user.name }}
@@ -65,8 +65,23 @@
         </div>
       </div>
     </div>
+    <div
+      class="fixed bottom-0 w-full h-16 flex justify-center items-center bg-gray-900 text-white"
+    >
+      <SocialLinks />
+    </div>
   </div>
 </template>
+
+<script>
+import SocialLinks from '@/components/SocialLinks'
+
+export default {
+  components: {
+    SocialLinks,
+  },
+}
+</script>
 
 <style lang="postcss" scoped>
 /* Sample `apply` at-rules with Tailwind CSS
@@ -75,6 +90,7 @@
 }
 */
 .container {
+  position: relative;
   margin: 0 auto;
   min-height: calc(100vh - 110px);
   display: flex;
