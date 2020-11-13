@@ -2,7 +2,12 @@
   <div class="flex justify-center items-center flex-col">
     <div class="bg-white p-5 shadow-md my-5">
       <div class="post-title mt-6">
-        <img class="hero" v-if="blog.image" :src="blog.image" :alt="blog.title" />
+        <img
+          class="hero"
+          v-if="blog.image"
+          :src="blog.image"
+          :alt="blog.title"
+        />
         <h1>{{ blog.title }}</h1>
         <div class="text-center pt-2">
           Published by {{ blog.author }} on {{ date }}
@@ -16,15 +21,9 @@
     <div class="bg-gray-400 p-6 w-full">
       <div class="mb-4">
         <h2>Tags</h2>
-        <div
-          v-for="tag in blog.tags"
-          :key="tag"
-          color="gray-800"
-          size="md"
-          class="pill"
-        >
-          {{ tag }}
-        </div>
+        <TagPill v-for="tag in blog.tags" :key="tag">
+          <nuxt-link :to="`/blog/?tag=${tag}`">{{ tag }}</nuxt-link>
+        </TagPill>
       </div>
     </div>
   </div>
@@ -32,6 +31,7 @@
 
 <script>
 import dayjs from 'dayjs'
+import TagPill from '@/components/TagPill'
 
 export default {
   async asyncData({ $content, params }) {
@@ -52,6 +52,9 @@ export default {
     updatedDate() {
       return dayjs(this.blog.updatedAt).format('MM/DD/YYYY')
     },
+  },
+  components: {
+    TagPill,
   },
 }
 </script>

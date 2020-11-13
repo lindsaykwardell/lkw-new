@@ -11,7 +11,8 @@
         />
       </label>
     </div>
-    <div class="flex flex-col lg:flex-row flex-wrap">
+    <ContentList :content="activePosts" />
+    <!-- <div class="flex flex-col lg:flex-row flex-wrap">
       <div
         v-for="post in activePosts"
         :key="post.slug"
@@ -29,7 +30,7 @@
           </nuxt-link>
         </div>
       </div>
-    </div>
+    </div> -->
     <client-only>
       <InfiniteLoading @infinite="infiniteHandler" />
     </client-only>
@@ -38,14 +39,16 @@
 
 <script>
 import InfiniteLoading from 'vue-infinite-loading'
+import ContentList from '@/components/ContentList'
 import Fuse from 'fuse.js'
 
 export default {
-  async asyncData({ $content }) {
+  async asyncData({ $content, query }) {
     const posts = await $content(`posts`).sortBy('date', 'desc').fetch()
 
     return {
       posts,
+      initialSearch: query.tag
     }
   },
   data: () => ({
@@ -56,7 +59,11 @@ export default {
   }),
   computed: {
     activePosts() {
-      return this.searchedPosts.filter((post, index) => index <= this.visible)
+      return this.searchedPosts.filter((post, index) => index <= this.visible).map(post => ({
+        ...post,
+        link: `/blog${post.slug}`,
+        image: post.image || this.$github.user.avatarUrl
+      }))
     },
   },
   methods: {
@@ -87,9 +94,14 @@ export default {
       keys: ['title', 'excerpt', 'tags'],
     })
     this.searchedPosts = this.posts
+
+    if (this.initialSearch) {
+      this.search = this.initialSearch
+    }
   },
   components: {
     InfiniteLoading,
+    ContentList
   },
 }
 </script>

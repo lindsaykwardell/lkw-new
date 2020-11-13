@@ -16,18 +16,8 @@
     </div>
 
     <ContentList :content="activeEpisodes">
-      <template #default="{ item }">
-        <div class="blog-item podcast-item">
-          <a :href="item.link" class="hover:no-underline">
-            <h4 class="blog-title podcast-title">{{ item.title }}</h4>
-            <img
-              class="blog-image podcast-image"
-              :src="item.image"
-              :alt="item.title"
-            />
-            <p class="p-3">{{ item.excerpt }}</p>
-          </a>
-        </div>
+      <template #title="{ title, defaultClasses }">
+        <h4 :class="defaultClasses">{{ title }}</h4>
       </template>
     </ContentList>
     <client-only>
@@ -65,8 +55,10 @@ export default {
       }))
     },
     activeEpisodes() {
-      return this.searchedEpisodes.filter((episode, index) => index <= this.visible)
-    }
+      return this.searchedEpisodes.filter(
+        (episode, index) => index <= this.visible
+      )
+    },
   },
   methods: {
     infiniteHandler($state) {
