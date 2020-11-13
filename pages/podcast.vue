@@ -30,7 +30,9 @@
         </div>
       </template>
     </ContentList>
-    <InfiniteLoading @infinite="infiniteHandler" />
+    <client-only>
+      <InfiniteLoading @infinite="infiniteHandler" />
+    </client-only>
   </div>
 </template>
 
