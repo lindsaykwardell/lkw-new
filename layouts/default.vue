@@ -14,6 +14,7 @@
       <div class="flex-grow flex justify-end text-white text-lg">
         <nuxt-link to="/" class="mx-4 hidden sm:inline">Home</nuxt-link>
         <nuxt-link to="/blog/" class="mx-4">Blog</nuxt-link>
+        <nuxt-link to="/podcast" class="mx-4">Podcast</nuxt-link>
       </div>
     </nav>
     <main>
