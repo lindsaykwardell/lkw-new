@@ -3,7 +3,7 @@ slug: "/what-does-it-mean-to-be-a-human"
 date: 2017-10-24
 title: "What does it mean to be a human in the World of Ilandrior?"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Essay
   - Ilandrior

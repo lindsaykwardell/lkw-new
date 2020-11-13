@@ -3,7 +3,7 @@ slug: "/lord-nerison"
 date: 2017-11-06
 title: "Lord Nerison"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

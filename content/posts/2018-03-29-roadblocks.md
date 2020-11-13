@@ -3,7 +3,7 @@ slug: "/roadblocks"
 date: 2018-03-29
 title: "Roadblocks"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

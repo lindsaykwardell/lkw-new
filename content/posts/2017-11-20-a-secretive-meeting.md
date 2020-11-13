@@ -3,7 +3,7 @@ slug: "/a-secretive-meeting"
 date: 2017-11-20
 title: "A Secretive Meeting"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

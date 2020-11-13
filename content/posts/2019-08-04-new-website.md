@@ -3,7 +3,7 @@ slug: "/new-website"
 date: 2019-08-04
 title: "New Website"
 author: "Lindsay Wardell"
-image: "code.png"
+image: "/blog/code.png"
 tags:
   - Web Development
   - Personal

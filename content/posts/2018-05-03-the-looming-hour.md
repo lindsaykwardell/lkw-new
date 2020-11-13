@@ -3,7 +3,7 @@ slug: "/the-looming-hour"
 date: 2018-05-03
 title: "The Looming Hour"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

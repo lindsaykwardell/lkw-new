@@ -3,7 +3,7 @@ slug: "/training-begins"
 date: 2017-09-11
 title: "Training Begins"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Argantin
   - Arhals

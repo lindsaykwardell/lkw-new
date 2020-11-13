@@ -3,7 +3,7 @@ slug: "/what-does-it-mean-to-be-a-dwarf"
 date: 2017-11-07
 title: "What does it mean to be a dwarf in the World of Ilandrior?"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Essay
   - Ilandrior

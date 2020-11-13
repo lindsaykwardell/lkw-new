@@ -3,7 +3,7 @@ slug: "/thevan-the-path-of-light"
 date: 2018-01-30
 title: "Thêvan - The Path of Light"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Essay
   - Ilandrior

@@ -3,7 +3,7 @@ slug: "/unexpected-meeting"
 date: 2017-10-02
 title: "Unexpected Meeting"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Albindor
   - Alden

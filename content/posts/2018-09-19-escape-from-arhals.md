@@ -3,7 +3,7 @@ slug: "/escape-from-arhals"
 date: 2018-09-19
 title: "Escape From Arhals"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

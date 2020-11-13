@@ -3,7 +3,7 @@ slug: "/funeral-of-a-high-mage"
 date: 2018-04-04
 title: "Funeral of a High Mage"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

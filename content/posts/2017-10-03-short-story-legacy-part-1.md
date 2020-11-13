@@ -3,7 +3,7 @@ slug: "/short-story-legacy-part-1"
 date: 2017-10-03
 title: "Short Story - Legacy (Part 1)"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Argantin
   - Arhals

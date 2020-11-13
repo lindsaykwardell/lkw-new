@@ -21,7 +21,7 @@
       </template>
     </ContentList>
     <client-only>
-      <InfiniteLoading @infinite="infiniteHandler" />
+      <InfiniteLoading v-if="activeEpisodes.length > visible" @infinite="infiniteHandler" />
     </client-only>
   </div>
 </template>

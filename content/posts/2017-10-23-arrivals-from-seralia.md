@@ -3,7 +3,7 @@ slug: "/arrivals-from-seralia"
 date: 2017-10-23
 title: "Arrivals from Seralia"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

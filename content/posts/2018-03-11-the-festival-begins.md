@@ -3,7 +3,7 @@ slug: "/the-festival-begins"
 date: 2018-03-11
 title: "The Festival Begins"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

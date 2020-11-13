@@ -3,7 +3,7 @@ slug: "/a-cryptic-warning"
 date: 2017-11-28
 title: "A Cryptic Warning"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

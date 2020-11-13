@@ -3,7 +3,7 @@ slug: "/meeting-before-dawn"
 date: 2018-05-07
 title: "Meeting Before Dawn"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

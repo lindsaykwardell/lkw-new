@@ -3,7 +3,7 @@ slug: "/the-marketplace-of-alden"
 date: 2017-09-18
 title: "The Marketplace of Alden"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Albindor
   - Alden

@@ -2,7 +2,7 @@
 slug: "/for-the-present"
 date: 2018-12-06
 title: "For the Present"
-image: "for-the-present.jpg"
+image: "/blog/for-the-present.jpg"
 author: "Lindsay Wardell"
 tags:
   - Science Fiction

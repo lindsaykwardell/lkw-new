@@ -3,7 +3,7 @@ slug: "/what-does-it-mean-to-be-an-elf"
 date: 2017-11-01
 title: "What does it mean to be an elf in the World of Ilandrior?"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Elves
   - Essay

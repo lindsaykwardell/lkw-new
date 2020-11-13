@@ -3,7 +3,7 @@ slug: "/festivals-of-peace"
 date: 2018-04-21
 title: "Festivals of Peace"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

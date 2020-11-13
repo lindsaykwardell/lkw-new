@@ -3,7 +3,7 @@ slug: "/gathering-of-the-senate"
 date: 2017-10-30
 title: "Gathering of the Senate"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

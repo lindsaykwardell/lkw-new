@@ -2,7 +2,7 @@
 slug: "/short-story-the-last-wizard"
 date: 2018-09-24
 title: "Short Story - The Last Wizard"
-image: "the-last-wizard.jpg"
+image: "/blog/the-last-wizard.jpg"
 author: "Lindsay Wardell"
 tags:
   - Magic

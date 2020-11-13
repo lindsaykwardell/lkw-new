@@ -3,7 +3,7 @@ slug: "/a-constant-debate"
 date: 2018-04-09
 title: "A Constant Debate"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

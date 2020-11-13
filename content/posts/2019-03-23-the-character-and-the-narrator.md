@@ -2,7 +2,7 @@
 slug: "/the-character-and-the-narrator"
 date: 2019-03-23
 title: "The Character and the Narrator"
-image: "character-narrator.jpg"
+image: "/blog/character-narrator.jpg"
 author: "Lindsay Wardell"
 tags:
   - Fiction

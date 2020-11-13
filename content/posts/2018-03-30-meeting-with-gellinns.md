@@ -3,7 +3,7 @@ slug: "/meeting-with-gellinns"
 date: 2018-03-30
 title: "Meeting with Gellinns"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

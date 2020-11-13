@@ -3,7 +3,7 @@ slug: "/the-book-of-generations"
 date: 2018-01-24
 title: "The Book of Generations"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Essay
   - Ilandrior

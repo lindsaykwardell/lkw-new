@@ -3,7 +3,7 @@ slug: "/the-collapse-part-2"
 date: 2018-05-23
 title: "The Collapse - Part 2"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

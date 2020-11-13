@@ -3,7 +3,7 @@ slug: "/morning-upon-the-walls"
 date: 2018-05-18
 title: "Morning Upon the Walls"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

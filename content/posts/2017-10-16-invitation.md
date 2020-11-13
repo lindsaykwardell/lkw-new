@@ -3,7 +3,7 @@ slug: "/invitation"
 date: 2017-10-16
 title: "Invitation"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

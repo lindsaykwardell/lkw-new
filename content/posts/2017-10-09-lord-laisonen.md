@@ -3,7 +3,7 @@ slug: "/lord-laisonen"
 date: 2017-10-09
 title: "Lord Laisonen"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Knights

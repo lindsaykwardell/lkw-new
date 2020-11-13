@@ -3,7 +3,7 @@ slug: "/tea-and-concern"
 date: 2018-04-21
 title: "Tea and Concern"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

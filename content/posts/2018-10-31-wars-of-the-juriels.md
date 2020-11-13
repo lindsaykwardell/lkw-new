@@ -2,7 +2,7 @@
 slug: "/wars-of-the-juriels"
 date: 2018-10-31
 title: "Wars of the Juriels"
-image: "warsofthejuriels.png"
+image: "/blog/warsofthejuriels.png"
 author: "Lindsay Wardell"
 tags:
   - Programming

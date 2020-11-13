@@ -3,7 +3,7 @@ slug: "/niel-departs"
 date: 2018-05-14
 title: "Niel Departs"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - The Folly of Wizards

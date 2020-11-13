@@ -3,7 +3,7 @@ slug: "/short-story-argantin-and-velsyph"
 date: 2017-12-04
 title: "Short Story - Argantin and Velsyph"
 author: "Lindsay Wardell"
-image: "juralen.png"
+image: "/blog/juralen.png"
 tags:
   - Ilandrior
   - Magic

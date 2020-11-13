@@ -2,7 +2,7 @@
 slug: "/wars-of-the-juriels-live-demo"
 date: 2018-11-05
 title: "Wars of the Juriels - Live Demo"
-image: "juriels-lobby.png"
+image: "/blog/juriels-lobby.png"
 author: "Lindsay Wardell"
 tags:
   - Programming
