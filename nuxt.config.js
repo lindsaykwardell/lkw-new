@@ -120,12 +120,7 @@ export default {
   },
   fontawesome: {
     icons: {
-      solid: true,
-      brands: [
-        'faGithub',
-        'faTwitter',
-        'faLinkedIn'
-      ]
+      brands: true
     }
   },
   generate: {
