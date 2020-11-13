@@ -32,7 +32,7 @@
       </div>
     </div> -->
     <client-only>
-      <InfiniteLoading @infinite="infiniteHandler" />
+      <InfiniteLoading v-if="activePosts.length > visible" @infinite="infiniteHandler" />
     </client-only>
   </div>
 </template>
@@ -43,12 +43,11 @@ import ContentList from '@/components/ContentList'
 import Fuse from 'fuse.js'
 
 export default {
-  async asyncData({ $content, query }) {
+  async asyncData({ $content }) {
     const posts = await $content(`posts`).sortBy('date', 'desc').fetch()
 
     return {
       posts,
-      initialSearch: query.tag
     }
   },
   data: () => ({
@@ -59,11 +58,13 @@ export default {
   }),
   computed: {
     activePosts() {
-      return this.searchedPosts.filter((post, index) => index <= this.visible).map(post => ({
-        ...post,
-        link: `/blog${post.slug}`,
-        image: post.image || this.$github.user.avatarUrl
-      }))
+      return this.searchedPosts
+        .filter((post, index) => index <= this.visible)
+        .map((post) => ({
+          ...post,
+          link: `/blog${post.slug}`,
+          image: post.image || this.$github.user.avatarUrl,
+        }))
     },
   },
   methods: {
@@ -75,18 +76,20 @@ export default {
         $state.complete()
       }
     },
+    performSearch() {
+      this.searchedPosts = this.fuse
+        .search(this.search)
+        .map((s) => ({ ...s.item }))
+    },
   },
   watch: {
     search() {
       clearTimeout(this.debounceSearch)
 
       if (!this.search.length) this.searchedPosts = this.posts
-      else
-        this.debounceSearch = setTimeout(() => {
-          this.searchedPosts = this.fuse
-            .search(this.search)
-            .map((s) => ({ ...s.item }))
-        }, 1000)
+      else this.debounceSearch = setTimeout(() => {
+        this.performSearch()
+      }, 1000)
     },
   },
   mounted() {
@@ -95,13 +98,18 @@ export default {
     })
     this.searchedPosts = this.posts
 
-    if (this.initialSearch) {
-      this.search = this.initialSearch
+    const initialSearch = this.$router.currentRoute.query.tag
+
+    if (initialSearch) {
+      console.log('Setting initial search')
+      this.search = initialSearch
+      clearTimeout(this.debounceSearch)
+      this.performSearch()
     }
   },
   components: {
     InfiniteLoading,
-    ContentList
+    ContentList,
   },
 }
 </script>
