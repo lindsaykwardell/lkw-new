@@ -1,6 +1,7 @@
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
+  mode: "universal",
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -81,8 +82,13 @@ export default {
     ],
   ],
 
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  /*
+   ** Content module configuration
+   ** See https://content.nuxtjs.org/configuration
+   */
+  content: {
+    liveEdit: false
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
@@ -96,7 +102,14 @@ export default {
       },
     },
   },
-  static: {
-    prefix: false,
+  generate: {
+    async routes() {
+      const { $content } = require('@nuxt/content')
+
+      const posts = await $content(`posts`).sortBy('date', 'desc').fetch()
+
+      return posts.map(post => ({route: `/blog${post.slug}`, payload: post}))
+    }
   },
+  telemetry: true
 }
