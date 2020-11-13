@@ -87,6 +87,7 @@ export default {
   }
   .hero {
     max-height: 550px;
+    max-width: 80vw;
     object-fit: contain;
     object-position: center;
     margin: 0 auto;
@@ -97,7 +98,12 @@ export default {
   }
 
   pre[class*='language'] {
-    @apply rounded shadow-md p-6 mx-16 my-6;
+    @apply rounded shadow-md;
+  }
+
+  pre {
+    width: auto !important;
+    max-width: 90vw;
   }
 
   article {
