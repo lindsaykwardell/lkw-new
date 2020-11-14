@@ -10,7 +10,7 @@ exports.handler = (event, context, callback) => {
   const payload = JSON.parse(event.body).payload
   const { postTitle, postPath, author, email, message } = payload.data
 
-  const filePath = `src/content/comments/${uuid()}.md`
+  const filePath = `content/comments/${uuid()}.md`
   const content = `---
 postPath: "${postPath}"
 date: ${dayjs().utc().format("YYYY-MM-DD HH:mm:ss")}
@@ -23,7 +23,7 @@ authorId: "${crypto
 ${message}`
 
   const buildEndpoint = () =>
-    "https://api.github.com/repos/lindsaykwardell/lindsaykwardell.com/contents/" +
+    "https://api.github.com/repos/lindsaykwardell/lindsaykwardell/contents/" +
     filePath
 
   axios
