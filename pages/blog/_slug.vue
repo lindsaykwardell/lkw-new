@@ -58,7 +58,15 @@
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             name="new-comment"
-          />
+            class="hidden"
+          >
+            <input type="hidden" name="form-name" />
+            <input type="hidden" name="postTitle" />
+            <input type="hidden" name="postPath" />
+            <input type="hidden" name="author" />
+            <input type="hidden" name="email" />
+            <input type="hidden" name="message" />
+          </form>
           <FormulateForm
             data-netlify="true"
             data-netlify-honeypot="bot-field"
