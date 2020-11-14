@@ -63,7 +63,7 @@ export default {
 
   .blog-image {
     @apply transition duration-500;
-    height: 250px;
+    height: 300px;
     width: 100%;
     object-fit: cover;
     /* filter: blur(3px); */
@@ -82,7 +82,7 @@ export default {
 }
 
 .blog-image-wrapper {
-  height: 250px;
+  height: 300px;
   width: 100%;
   overflow: hidden;
 }
