@@ -226,7 +226,7 @@ export default {
       })
       this.formStatus = STATUS_WAITING
       try {
-        await axios.post('/', formData)
+        await axios.post('', formData)
         this.formStatus = STATUS_SUBMITTED
         this.accepted = true
       } catch (err) {
