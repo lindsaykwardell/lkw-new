@@ -25,7 +25,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['~/plugins/viewsonvue.server.js'],
+  plugins: ['~/plugins/viewsonvue.server.js', '~/plugins/vue-formulate.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
