@@ -54,8 +54,12 @@
       <div class="rounded my-8 shadow-md bg-white w-full">
         <h4 class="p-4 pb-0">Add a Comment</h4>
         <div class="p-4">
-          <FormulateForm
+          <form
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
             name="new-comment"
+          />
+          <FormulateForm
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             @submit="submitComment"
@@ -75,6 +79,7 @@
               name="postPath"
               :value="`/blog${blog.slug}`"
             />
+            <FormulateInput type="hidden" name="bot-field" />
             <FormulateInput
               type="text"
               name="author"
@@ -107,7 +112,6 @@
                 type="submit"
                 class="text-white rounded-lg transition duration-200 mt-5 w-1/3 md:w-1/4 lg:w-1/5 text-center"
                 input-class="px-4 py-2 w-full"
-                
                 :disabled="submitted"
               >
                 <div class="flex justify-center">
@@ -136,13 +140,13 @@
                 </div>
               </FormulateInput>
             </div>
-          <VAlert class="success" v-model="accepted" transition="fade"
-          >Your comment has been posted! It will appear after it is
-          approved.</VAlert
-          >
-          <VAlert class="error" v-model="error" transition="fade"
-            >An error occurred. Please try again.</VAlert
-          >
+            <VAlert class="success" v-model="accepted" transition="fade"
+              >Your comment has been posted! It will appear after it is
+              approved.</VAlert
+            >
+            <VAlert class="error" v-model="error" transition="fade"
+              >An error occurred. Please try again.</VAlert
+            >
           </FormulateForm>
         </div>
       </div>
@@ -192,7 +196,7 @@ export default {
   data: () => ({
     formStatus: STATUS_IDLE,
     accepted: false,
-    error: false
+    error: false,
   }),
   computed: {
     date() {
@@ -238,7 +242,7 @@ export default {
   components: {
     TagPill,
     SocialLinks,
-    VAlert
+    VAlert,
   },
 }
 </script>
